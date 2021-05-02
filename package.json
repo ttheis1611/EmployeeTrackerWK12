@@ -1,0 +1,25 @@
+{
+  "name": "employeetrackerwk12",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "inquirer": "^8.0.0",
+    "mysql2": "^2.2.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttheis1611/EmployeeTrackerWK12.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ttheis1611/EmployeeTrackerWK12/issues"
+  },
+  "homepage": "https://github.com/ttheis1611/EmployeeTrackerWK12#readme"
+}
