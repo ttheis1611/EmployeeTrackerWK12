@@ -1,18 +1,30 @@
-DROP DATABASE IF EXISTS inventory_db;
-CREATE DATABASE inventory_db;
+DROP DATABASE IF EXISTS business_db ;
+CREATE DATABASE business_db;
 
-USE inventory_db;
+USE business_db;
 
-CREATE TABLE prices (
+CREATE TABLE employee (
   id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  price DECIMAL(10,2) NOT NULL
+  first_name varchar(30) NOT NULL,
+  last_name varchar(30) NOT NULL,
+  role_id INT,
+  manager_id INT,
+  FOREIGN KEY (role_id) REFERENCES roles(id)
+  ON DELETE SET NULL,
+  FOREIGN KEY (manager_id) REFERENCES employee(id) 
 );
 
-CREATE TABLE books(
+CREATE TABLE roles(
   id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  book_name VARCHAR(30) NOT NULL,
-  price INTEGER,
-  FOREIGN KEY (price)
-  REFERENCES prices(id)
+  title VARCHAR(30) NULL,
+  salary decimal (8,2) NULL,
+  department_id INT NULL,
+  FOREIGN KEY (department_id)
+  REFERENCES department(id)
   ON DELETE SET NULL
+);
+
+CREATE TABLE department(
+  id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  dept_name varchar(30)
 );

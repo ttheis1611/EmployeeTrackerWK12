@@ -1,8 +1,45 @@
--- books table is column 1 book_name, column 2 price
+-- all tables queries
+SELECT * FROM departments;
+SELECT * FROM roles;
+SELECT * FROM employee;
+
+--add department
+INSERT INTO department(dept_name) values ('');
+--add role
+INSERT INTO roles(title, salary, department_id) values ('');
+--add employee
+INSERT INTO employee(first_name, last_name, role_id, manager_id) values ('');
+--update employee role
+UPDATE employee SET role_id = '' WHERE employee.id = '';
+
+--employee data query
 SELECT
-  books.book_name AS book_name, prices.price AS price
--- from books table
-FROM books
--- 
-JOIN  prices ON books.price = prices.id
-ORDER BY price;
+  employee.id,
+  employee.first_name, 
+  employee.last_name, 
+  roles.title, 
+  roles.salary
+FROM employee JOIN roles on roles.id
+
+-- employee and departments
+SELECT  
+    employee.id,
+    employee.first_name, 
+    employee.last_name, 
+    roles.title,
+    department.dept_name,
+    roles.salary,
+FROM employee INNER JOIN roles ON roles.id = employee.role_id
+INNER JOIN department ON department_id;
+
+--all employee by department query
+SELECT  
+    employee.id,
+    employee.first_name, 
+    employee.last_name, 
+    roles.title,
+    department.dept_name,
+    roles.salary,
+FROM employee INNER JOIN roles ON roles.id = employee.role_id
+INNER JOIN department ON department_id = roles.department_id
+WHERE department.dept_name = 'Management';
