@@ -1,4 +1,5 @@
 const {prompt} = require('inquirer');
+const db = require("./db");
 
 const app = express();
 const PORT = 3001;
