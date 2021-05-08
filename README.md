@@ -34,8 +34,8 @@ Node
 ![Total Budget](./images/ETMTotalBudget.png)
 
 ### Demo Link
-![DemoLink](./images/DEMO_ETM.webm)
-![Demo](https://drive.google.com/file/d/1E2GUGVQkGK_-g8RrCHHY4XNTPHmRER5l/view)
+![Demofile](./images/DEMO_ETM.webm)
+Link: https://drive.google.com/file/d/1E2GUGVQkGK_-g8RrCHHY4XNTPHmRER5l/view
 
 
 
