@@ -26,11 +26,11 @@ Inquirer, MySql
 Node
   
 ### Screenshots
-![Main Menu](./images/ETM-MainMenu.jpg)
+![Main_Menu](./images/ETM-MainMenu.jpg)
  
-![Employee view](./images/ETM-EmployeeView.jpg)
+![Employee_view](./images/ETM-EmployeeView.jpg)
  
-![Total Budget](./images/ETM-TotalBudget.jpg)
+![Total_Budget](./images/ETM-TotalBudget.jpg)
  
 
 
