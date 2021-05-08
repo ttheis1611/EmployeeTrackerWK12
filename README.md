@@ -19,11 +19,11 @@ A terminal application that allows the use of a database call business_db to sto
 ## Installation
 This application needs to install: 
 ```
-Node
+Inquirer, MySql
 ```
   
 ## Usage
-Inquirer
+Node
   
 ### Screenshots
 ![Main Menu](./images/ETM-MainMenu.jpg)
