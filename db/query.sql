@@ -39,3 +39,6 @@ SELECT
     roles.salary,
 FROM employee INNER JOIN roles ON roles.id = employee.role_id
 INNER JOIN department ON department_id;
+
+-- total budget
+SELECT d.dept_name AS Department, sum(r.salary) AS Salary_Total FROM employee e LEFT JOIN employee m ON e.manager_id = m.id INNER JOIN roles r ON e.role_id = r.id INNER JOIN department d ON r.department_id = d.id GROUP By department;

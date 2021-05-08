@@ -47,6 +47,15 @@ async function showEmployeeSummary() {
     });
 };
 
+async function totalBudget() {
+    console.log(' ');
+    await db.query('SELECT d.dept_name AS Department, sum(r.salary) AS Salary_Total FROM employee e LEFT JOIN employee m ON e.manager_id = m.id INNER JOIN roles r ON e.role_id = r.id INNER JOIN department d ON r.department_id = d.id GROUP By department;', (err, res) => {
+        if (err) throw err;
+        console.table(res);
+        startApp();
+    });
+};
+
 // Builds a table which shows existing roles and their departments
 async function showRoleSummary() {
     console.log(' ');
@@ -454,6 +463,7 @@ function startApp() {
             "Edit Roles",
             "View Departments",
             "Edit Departments",
+            "View Total Budget",
             "Quit"
         ]
     }).then(responses => {
@@ -475,6 +485,9 @@ function startApp() {
                 break;
             case "Edit Departments":
                 editDepartmentOptions();
+                break;
+            case "View Total Budget":
+                totalBudget();
                 break;
             default:
                 quit();
