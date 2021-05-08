@@ -128,7 +128,7 @@ async function removeEmployee() {
             choices: employees.map(obj => obj.name)
         }
     ]).then(response => {
-        if (response.employeeName != "Cancel") {
+        if (response.employeeName !== "Cancel") {
             let unluckyEmployee = employees.find(obj => obj.name === response.employeeName);
             db.query("DELETE FROM employee WHERE id=?", unluckyEmployee.id);
             console.log("\x1b[32m", `${response.employeeName} was let go...`);
@@ -150,7 +150,7 @@ async function updateManager() {
             choices: employees.map(obj => obj.name)
         }
     ]).then(employeeInfo => {
-        if (employeeInfo.empName == "Cancel") {
+        if (employeeInfo.empName === "Cancel") {
             startApp();
             return;
         }
@@ -198,13 +198,14 @@ async function updateEmployeeRole() {
             choices: roles.map(obj => obj.title)
         }
     ]).then(answers => {
-        if (answers.empName != "Cancel") {
+        if (answers.empName !== "Cancel") {
             let empID = employees.find(obj => obj.name === answers.empName).id
             let roleID = roles.find(obj => obj.title === answers.newRole).id
             db.query("UPDATE employee SET role_id=? WHERE id=?", [roleID, empID]);
             console.log("\x1b[32m", `${answers.empName} new role is ${answers.newRole}`);
         }
-        startApp();
+            startApp();
+        
     })
 };
 
@@ -258,7 +259,7 @@ async function updateRole() {
             choices: roles.map(obj => obj.title)
         }
     ]).then(response => {
-        if (response.roleName == "Cancel") {
+        if (response.roleName === "Cancel") {
             startApp();
             return;
         }
@@ -303,7 +304,7 @@ async function removeRole() {
             choices: roles.map(obj => obj.title)
         }
     ]).then(response => {
-        if (response.roleName != "Cancel") {
+        if (response.roleName !== "Cancel") {
             let noMoreRole = roles.find(obj => obj.title === response.roleName);
             db.query("DELETE FROM roles WHERE id=?", noMoreRole.id);
             console.log("\x1b[32m", `${response.roleName} was removed. Please reassign associated employees.`);
@@ -341,9 +342,9 @@ async function removeDepartment() {
             choices: departments.map(obj => obj.dept_name)
         }
     ]).then(response => {
-        if (response.depName != "Cancel") {
-            let uselessDepartment = departments.find(obj => obj.dept_name === response.depName);
-            db.query("DELETE FROM department WHERE id=?", uselessDepartment.id);
+        if (response.depName !== "Cancel") {
+            let deleteDepartment = departments.find(obj => obj.dept_name === response.depName);
+            db.query("DELETE FROM department WHERE id=?", deleteDepartment.id);
             console.log("\x1b[32m", `${response.depName} was removed. Please reassign associated roles.`);
         }
         startApp();
