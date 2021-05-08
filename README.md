@@ -27,11 +27,11 @@ Node
   
 ### Screenshots
 
-![Main Menu](./images/ETMMainMenu.jpg)
+![Main Menu](./images/ETMMainMenu.png)
  
-![Employee view](./images/ETMEmployeeView.jpg)
+![Employee view](./images/ETMEmployeeView.png)
  
-![Total Budget](./images/ETMTotalBudget.jpg)
+![Total Budget](./images/ETMTotalBudget.png)
 
 
 
