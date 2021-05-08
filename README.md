@@ -26,20 +26,14 @@ Inquirer, MySql
 Node
   
 ### Screenshots
-<<<<<<< HEAD
+
 ![Main Menu](./images/ETMMainMenu.jpg)
  
 ![Employee view](./images/ETMEmployeeView.jpg)
  
 ![Total Budget](./images/ETMTotalBudget.jpg)
-=======
-![Main_Menu](https://github.com/ttheis1611/EmployeeTrackerWK12/blob/main/images/ETM-MainMenu.jpg)
- 
-![Employee_view](https://github.com/ttheis1611/EmployeeTrackerWK12/blob/main/images/ETM-EmployeeView.jpg)
- 
-![Total_Budget](https://github.com/ttheis1611/EmployeeTrackerWK12/blob/main/images/ETM-TotalBudget.jpg)
->>>>>>> 632296d5a0882f73921b5dc65cef0c7eeda328fb
- 
+
+
 
 
 ## Contributing
